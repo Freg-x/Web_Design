@@ -1,0 +1,51 @@
+body{
+  background-image: url(background_pie.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+a{
+  text-decoration: none;
+  color:white;
+
+
+  font-size: 15px;
+}
+
+.center{
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: auto;
+  padding-top: 8px;
+  background-color: #FFAA00;
+  width: 120px;
+height:30px
+
+
+}
+
+h1{
+  font-size: 52px;
+  margin-top: 300px;
+  text-align:center;
+  color:#929292;
+}
+
+.outline{
+
+
+  padding-bottom: 100px;
+  border:5px solid #EDE4D3;
+  height: 600px;
+
+}
+
+.Copyright{
+  font-family: monospace;
+  text-align: center;
+  color:#909090;
+}

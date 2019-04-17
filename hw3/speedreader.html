@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>speedreader</title>
+    <link rel="stylesheet" href="speedreader.css" type="text/css">
+
+    <script src="speedreader.js">
+    </script>
+
+  </head>
+  <body>
+<h1>SpeedReader</h1>
+
+<div id="output">
+
+</div>
+
+
+<br>
+
+
+
+<div id="Controls">
+
+<div class="field">
+<div class="list">Play Controls:</div>
+<button type="button" id="start">Start</button>
+<button type="button" id="stop">Stop</button>
+</div>
+
+
+<div class="field">
+<div class="list">Speed:</div>
+
+<select id="select">
+  <option value="350wpm">350wpm</option>
+  <option value="200wpm">200wpm</option>
+  <option value="300wpm">300wpm</option>
+  <option value="400wpm">400wpm</option>
+  <option value="450wpm">450wpm</option>
+  <option value="500wpm">500wpm</option>
+</select>
+</div>
+
+
+<div class="field">
+<div class="list">Size:</div>
+
+<label><input type="radio" name="size" value="1" id="M">Medium</label>
+<label><input type="radio" name="size" value="2" id="B">Big</label>
+<label><input type="radio" name="size" value="3" id="BB">Bigger</label>
+</div>
+
+
+
+</div>
+<br>
+
+<div class="input">
+
+<div class="list">Input Text</div>
+
+<textarea id="input" rows="10" cols="80"></textarea>
+
+</div>
+  </body>
+</html>
