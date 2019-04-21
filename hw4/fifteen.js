@@ -163,7 +163,7 @@ moves++;
 
 
 if(finish()){
-  moves-=1000;
+  
   alert("This is the "+finish_times+" times you did it, it takes "+moves+" clicks");
   moves=0;
 }
@@ -198,7 +198,17 @@ if(canmove(parseInt(window.getComputedStyle(divs[j]).left),parseInt(window.getCo
 
 var moveid=parseInt(Math.random() * array.length);
 
-divs[array[moveid]].click();
+
+
+var tmp1=parseInt(window.getComputedStyle(divs[array[moveid]]).top);
+var tmp2=parseInt(window.getComputedStyle(divs[array[moveid]]).left);
+divs[array[moveid]].style.top=empty_y+"px";
+divs[array[moveid]].style.left=empty_x+"px";
+empty_y=tmp1;
+empty_x=tmp2;
+
+
+
 array.splice(0,array.length);
 
 }
