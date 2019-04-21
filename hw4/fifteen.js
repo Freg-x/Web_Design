@@ -92,42 +92,7 @@ document.getElementById("shufflebutton").onclick=shuffle;
 
 
 
-if(parseInt(window.getComputedStyle(div11).left)==0&&
-parseInt(window.getComputedStyle(div11).top)==0&&
-parseInt(window.getComputedStyle(div12).left)==100&&
-parseInt(window.getComputedStyle(div12).top)==0&&
-parseInt(window.getComputedStyle(div13).left)==200&&
-parseInt(window.getComputedStyle(div13).top)==0&&
-parseInt(window.getComputedStyle(div14).left)==300&&
-parseInt(window.getComputedStyle(div14).top)==0&&
-parseInt(window.getComputedStyle(div21).left)==0&&
-parseInt(window.getComputedStyle(div21).top)==100&&
-parseInt(window.getComputedStyle(div22).left)==100&&
-parseInt(window.getComputedStyle(div22).top)==100&&
-parseInt(window.getComputedStyle(div23).left)==200&&
-parseInt(window.getComputedStyle(div23).top)==100&&
-parseInt(window.getComputedStyle(div24).left)==300&&
-parseInt(window.getComputedStyle(div24).top)==100&&
-parseInt(window.getComputedStyle(div31).left)==0&&
-parseInt(window.getComputedStyle(div31).top)==200&&
-parseInt(window.getComputedStyle(div32).left)==100&&
-parseInt(window.getComputedStyle(div32).top)==200&&
-parseInt(window.getComputedStyle(div33).left)==200&&
-parseInt(window.getComputedStyle(div33).top)==200&&
-parseInt(window.getComputedStyle(div34).left)==300&&
-parseInt(window.getComputedStyle(div34).top)==200&&
-parseInt(window.getComputedStyle(div41).left)==0&&
-parseInt(window.getComputedStyle(div41).top)==300&&
-parseInt(window.getComputedStyle(div42).left)==100&&
-parseInt(window.getComputedStyle(div42).top)==300&&
-parseInt(window.getComputedStyle(div43).left)==200&&
-parseInt(window.getComputedStyle(div43).top)==300&&finished>0
 
-
-
-
-)
-{alert("you win!"+"this is the"+finished+"time you did it");}
 
 
 
@@ -156,8 +121,8 @@ parseInt(window.getComputedStyle(div43).top)==300&&finished>0
 
 var empty_x=300;
 var empty_y=300;
-var finished=0;
-
+var finish_times=0;
+var moves=0;
 
 function canmove(x,y){
 if(
@@ -194,7 +159,24 @@ function click(){
     this.style.left=empty_x+"px";
     empty_y=tmp1;
     empty_x=tmp2;
+moves++;
+
+
+if(finish()){
+  moves-=1000;
+  alert("This is the "+finish_times+" times you did it, it takes "+moves+" clicks");
+  moves=0;
+}
+
+
+
   }
+
+
+
+
+
+
 
 }
 
@@ -220,7 +202,73 @@ divs[array[moveid]].click();
 array.splice(0,array.length);
 
 }
-finished++;
+finish_times++;
+
+}
+
+
+function finish(){
+var div11=document.getElementById("piece1-1");
+var div12=document.getElementById("piece1-2");
+var div13=document.getElementById("piece1-3");
+var div14=document.getElementById("piece1-4");
+var div21=document.getElementById("piece2-1");
+var div22=document.getElementById("piece2-2");
+var div23=document.getElementById("piece2-3");
+var div24=document.getElementById("piece2-4");
+var div31=document.getElementById("piece3-1");
+var div32=document.getElementById("piece3-2");
+var div33=document.getElementById("piece3-3");
+var div34=document.getElementById("piece3-4");
+var div41=document.getElementById("piece4-1");
+var div42=document.getElementById("piece4-2");
+var div43=document.getElementById("piece4-3");
+
+
+
+
+
+
+  if(parseInt(window.getComputedStyle(div11).left)==0&&
+  parseInt(window.getComputedStyle(div11).top)==0&&
+  parseInt(window.getComputedStyle(div12).left)==100&&
+  parseInt(window.getComputedStyle(div12).top)==0&&
+  parseInt(window.getComputedStyle(div13).left)==200&&
+  parseInt(window.getComputedStyle(div13).top)==0&&
+  parseInt(window.getComputedStyle(div14).left)==300&&
+  parseInt(window.getComputedStyle(div14).top)==0&&
+  parseInt(window.getComputedStyle(div21).left)==0&&
+  parseInt(window.getComputedStyle(div21).top)==100&&
+  parseInt(window.getComputedStyle(div22).left)==100&&
+  parseInt(window.getComputedStyle(div22).top)==100&&
+  parseInt(window.getComputedStyle(div23).left)==200&&
+  parseInt(window.getComputedStyle(div23).top)==100&&
+  parseInt(window.getComputedStyle(div24).left)==300&&
+  parseInt(window.getComputedStyle(div24).top)==100&&
+  parseInt(window.getComputedStyle(div31).left)==0&&
+  parseInt(window.getComputedStyle(div31).top)==200&&
+  parseInt(window.getComputedStyle(div32).left)==100&&
+  parseInt(window.getComputedStyle(div32).top)==200&&
+  parseInt(window.getComputedStyle(div33).left)==200&&
+  parseInt(window.getComputedStyle(div33).top)==200&&
+  parseInt(window.getComputedStyle(div34).left)==300&&
+  parseInt(window.getComputedStyle(div34).top)==200&&
+  parseInt(window.getComputedStyle(div41).left)==0&&
+  parseInt(window.getComputedStyle(div41).top)==300&&
+  parseInt(window.getComputedStyle(div42).left)==100&&
+  parseInt(window.getComputedStyle(div42).top)==300&&
+  parseInt(window.getComputedStyle(div43).left)==200&&
+  parseInt(window.getComputedStyle(div43).top)==300&&finish_times>0
+
+
+
+
+)
+return 1;
+else return 0;
+
+
+
 
 
 
